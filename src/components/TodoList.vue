@@ -65,22 +65,24 @@ const completeTodo = (todoId) => {
         padding: 1rem .5rem;
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
+        align-items: start;
         gap: .5rem;
         border-bottom: 1px solid var(--vt-c-text-dark-2);
 
         .todo {
            
             max-width: calc( 100% - 100px);
-            line-height: 1;
+            line-height: 1.75;
             font-size: 1rem;
             padding: 0 .25rem;
             color: var(--vt-c-indigo);
             overflow-wrap: break-word;
+            transition: all .15s;
 
             &.complete {
                 text-decoration-line: line-through;
                 font-weight: 600;
+                transition: all .15s;
             }
         }
 
@@ -141,5 +143,12 @@ const completeTodo = (todoId) => {
 
 .tips {
     color: var(--vt-c-divider-dark-2);
+}
+
+@media (max-width:992px) {
+    .todoListFrame .todoList .todo{
+        max-width: 100%;
+        transition: all .15s;
+    }
 }
 </style>
