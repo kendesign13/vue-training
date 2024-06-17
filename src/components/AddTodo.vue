@@ -32,6 +32,8 @@ const onSubmit = () => {
 </script>
 
 <style lang="scss">
+
+
 .form-control {
     display: block;
     width: 100%;
@@ -82,6 +84,11 @@ const onSubmit = () => {
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
+
+    .todoBox {
+        // width: 100%;
+        flex:1 0 auto;
+    }
 
     .todoInput {
         line-height: 1.25rem;

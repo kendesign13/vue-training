@@ -61,6 +61,7 @@ const completeTodo = (todoId) => {
     transition: all .35s;
 
     .todoList {
+        max-width: 100%;
         padding: 1rem .5rem;
         display: flex;
         flex-flow: row wrap;
@@ -69,13 +70,17 @@ const completeTodo = (todoId) => {
         border-bottom: 1px solid var(--vt-c-text-dark-2);
 
         .todo {
+           
+            max-width: calc( 100% - 100px);
             line-height: 1;
             font-size: 1rem;
             padding: 0 .25rem;
             color: var(--vt-c-indigo);
+            overflow-wrap: break-word;
 
             &.complete {
                 text-decoration-line: line-through;
+                font-weight: 600;
             }
         }
 
