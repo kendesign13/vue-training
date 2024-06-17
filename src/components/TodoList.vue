@@ -72,7 +72,7 @@ const completeTodo = (todoId) => {
 
         .todo {
            
-            max-width: calc( 100% - 100px);
+            max-width: 100%;
             line-height: 1.75;
             font-size: 1rem;
             padding: 0 .25rem;
