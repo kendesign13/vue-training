@@ -1,7 +1,7 @@
 <template>
 
     <form id="form" @submit.prevent="onSubmit" class="todoFrame">
-        <div>
+        <div class="todoBox">
             <input class="form-control todoInput" v-model="text" type="text" placeholder="Todo Text...">
         </div>
 
