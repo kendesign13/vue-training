@@ -66,6 +66,7 @@ const completeTodo = (todoId) => {
         display: flex;
         flex-flow: row wrap;
         align-items: start;
+        justify-content: flex-start;
         gap: .5rem;
         border-bottom: 1px solid var(--vt-c-text-dark-2);
 
