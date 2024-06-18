@@ -72,7 +72,7 @@ const completeTodo = (todoId) => {
 
         .todo {
            
-            max-width: 100%;
+            max-width: calc(100% - 80px);
             line-height: 1.75;
             font-size: 1rem;
             padding: 0 .25rem;
@@ -93,10 +93,10 @@ const completeTodo = (todoId) => {
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            width: 30px;
-            height: 30px;
+            // width: 30px;
+            // height: 30px;
             color: var(--vt-c-white);
-            // padding: .15rem;
+            padding: .25rem;
             border: 0px;
             border-radius: 1000px;
             font-size: 2rem;
