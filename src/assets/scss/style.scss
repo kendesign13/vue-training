@@ -1,0 +1,374 @@
+// ===================== Commom =====================
+:root {
+    --bs-light: #F9F9F9;
+    --bs-primary: #009ef7;
+    --bs-secondary: #F1F1F4;
+    --bs-success: #50cd89;
+    --bs-info: #7239ea;
+    --bs-warning: #ffc700;
+    --bs-danger: #f1416c;
+    --bs-dark: #1E2129;
+    --bs-primary-active: #0095e8;
+    --bs-secondary-active: #C4CADA;
+    --bs-light-active: #F1F1F4;
+    --bs-success-active: #47be7d;
+    --bs-info-active: #5014d0;
+    --bs-warning-active: #f1bc00;
+    --bs-danger-active: #d9214e;
+    --bs-dark-active: #111318;
+    --bs-primary-light: #f1faff;
+    --bs-secondary-light: #F9F9F9;
+    --bs-success-light: #e8fff3;
+    --bs-info-light: #f8f5ff;
+    --bs-warning-light: #fff8dd;
+    --bs-danger-light: #fff5f8;
+    --bs-dark-light: #F9F9F9;
+    --bs-light-light: #ffffff;
+
+    --bs-primary-inverse: #ffffff;
+    --bs-secondary-inverse: #252F4A;
+    --bs-light-inverse: #252F4A;
+    --bs-success-inverse: #ffffff;
+    --bs-info-inverse: #ffffff;
+    --bs-warning-inverse: #ffffff;
+    --bs-danger-inverse: #ffffff;
+    --bs-dark-inverse: #ffffff;
+
+    --bs-text-white: #ffffff;
+    --bs-text-primary: #00A3FF;
+    --bs-text-secondary: #DBDFE9;
+    --bs-text-light: #F9F9F9;
+    --bs-text-success: #50CD89;
+    --bs-text-info: #7239EA;
+    --bs-text-warning: #FFC700;
+    --bs-text-danger: #F1416C;
+    --bs-text-dark: #071437;
+    --bs-text-muted: #99A1B7;
+
+    --bs-text-gray-100: #F9F9F9;
+    --bs-text-gray-200: #F1F1F2;
+    --bs-text-gray-300: #DBDFE9;
+    --bs-text-gray-400: #B5B5C3;
+    --bs-text-gray-500: #99A1B7;
+    --bs-text-gray-600: #78829D;
+    --bs-text-gray-700: #4B5675;
+    --bs-text-gray-800: #252F4A;
+    --bs-text-gray-900: #071437;
+
+
+    --bs-heading-color: #071437;
+}
+
+.label-title {
+    color: var(--bs-heading-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+label {
+    display: inline-block;
+}
+
+.form-label {
+    margin-bottom: .5rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+// ===================== AddTodo =====================
+
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.placeholder-red::placeholder {
+    color: var(--bs-danger);
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.todoFrame {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-bottom: .5rem;
+
+    .todoBox {
+        // width: 100%;
+        flex: 1 0 auto;
+    }
+
+    .todoInput {
+        line-height: 1.25rem;
+        font-size: 1rem;
+        height: 40px;
+        padding: .5rem;
+        border-radius: 5px;
+    }
+
+    .btn-add {
+        font-weight: 600;
+        border: none;
+        height: 40px;
+        outline: none;
+        color: var(--bs-primary-inverse);
+        border-color: var(--bs-primary);
+        background-color: var(--bs-primary);
+    }
+
+    .btn-add:hover {
+        background: var(--bs-primary-active);
+    }
+}
+
+
+// ===================== TodoList =====================
+
+
+.todoListFrame {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    height: auto;
+    max-height: 100%;
+    transition: all .35s;
+
+    .todoList {
+        max-width: 100%;
+        padding: 1rem .5rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: start;
+        justify-content: flex-start;
+        gap: .5rem;
+        border-bottom: 1px solid var(--vt-c-text-dark-2);
+
+        .todo {
+            max-width: calc(100% - 120px);
+            line-height: 1.75;
+            font-size: 1rem;
+            padding: 0 .25rem;
+            color: var(--bs-text-gray-900);
+            overflow-wrap: break-word;
+            transition: all .15s;
+
+            &.complete {
+                text-decoration-line: line-through;
+                font-weight: 600;
+                transition: all .15s;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--vt-c-white);
+            padding: .25rem;
+            border: 0px;
+            border-radius: 1000px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .btn-delete {
+            outline: none;
+            box-shadow: inset 2px 2px 3px 0px rgba(255, 162, 0, 0.638), 0px 0px 0px 0px rgba(120, 130, 157, 0.0);
+            background: rgba(255, 42, 43, 1);
+            background: linear-gradient(135deg, rgba(255, 6, 6, 1) 0%, rgba(143, 0, 0, 1) 100%);
+
+            transition: all .35s;
+        }
+
+        .btn-delete:hover,
+        .btn-delete:focus,
+        .btn-delete:active {
+            box-shadow: inset 2px 2px 3px 0px rgba(135, 0, 0, 0.85), 0px 0px 0px 4px rgba(117, 127, 156, 0.35);
+            background: rgba(143, 0, 0, 1);
+            background: linear-gradient(315deg, rgba(255, 6, 6, 1) 0%, rgba(143, 0, 0, 1) 100%);
+            transition: all .35s;
+        }
+
+        .btn-complete {
+            outline: none;
+            box-shadow: inset 2px 2px 3px 0px rgba(0, 235, 255, .75), 0px 0px 0px 0px rgba(12, 13, 18, 0);
+            background: rgba(80, 170, 255, 1);
+            background: linear-gradient(135deg, rgba(0, 202, 162, 1) 0%, rgba(0, 136, 255, 1) 100%);
+            transition: all .35s;
+        }
+
+        .btn-complete:hover,
+        .btn-complete:focus {
+            outline: none;
+            box-shadow: inset 2px 2px 3px 0px rgba(0, 90, 100, 0.75), 0px 0px 0px 4px rgba(117, 127, 156, 0.35);
+            background: rgba(0, 136, 255, 1);
+            background: linear-gradient(315deg, rgba(0, 202, 162, 1) 0%, rgba(0, 136, 255, 1) 100%);
+            transition: all .35s;
+        }
+
+        .btn-edit {
+            outline: none;
+            box-shadow: inset 2px 2px 3px 0px rgba(255, 195, 0, 0.65), 0px 0px 0px 0px rgba(120, 130, 157, 0.0);
+            background: rgba(255, 225, 0, 1);
+            background: linear-gradient(135deg, rgba(255, 225, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+            transition: all .35s;
+        }
+
+        .btn-edit:hover,
+        .btn-edit:focus {
+            box-shadow: inset 2px 2px 3px 0px rgba(255, 119, 0, 0.65), 0px 0px 0px 4px rgba(117, 127, 156, 0.35);
+            background: rgba(255, 225, 0, 1);
+            background: linear-gradient(315deg, rgba(255, 225, 0, 1) 0%, rgba(255, 140, 0, 1) 100%);
+            transition: all .35s;
+        }
+
+        .list-content {
+            color: var(--bs-text-gray-800);
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+.tips {
+    color: var(--bs-text-gray-500);
+}
+
+@media (max-width:992px) {
+    .todoListFrame .todoList .todo {
+        max-width: 100%;
+        display: block;
+        transition: all .15s;
+    }
+}
+
+// ===================== modal =====================
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 10px;
+
+    .form-footer {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: end;
+
+
+
+        .btn-save {
+            font-weight: 600;
+            border: none;
+            height: 40px;
+            outline: none;
+            color: var(--bs-primary-inverse);
+            border-color: var(--bs-primary);
+            background-color: var(--bs-primary);
+        }
+
+        .btn-save:hover,
+        .btn-save:focus {
+            background-color: var(--bs-primary-active);
+        }
+
+        .btn-cancel {
+            font-weight: 600;
+            border: none;
+            height: 40px;
+            outline: none;
+            color: var(--bs-secondary-inverse);
+            border-color: var(--bs-secondary);
+            background-color: var(--bs-secondary);
+        }
+
+        .btn-cancel:hover,
+        .btn-cancel:focus {
+            color: var(--bs-secondary-inverse);
+            background-color: var(--bs-secondary-active);
+        }
+
+    }
+
+
+}
