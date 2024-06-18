@@ -372,3 +372,18 @@ label {
 
 
 }
+
+
+.input-error {
+    border: 2px solid var(--bs-danger);
+}
+.input-error::placeholder,
+.input-error {
+    color: var(--bs-danger);
+}
+
+.input-error:focus,
+.input-error:active {
+    border: 2px solid var(--bs-danger);
+    box-shadow: 0 0 0 0.25rem rgba(255, 0, 25, 0.35);
+}

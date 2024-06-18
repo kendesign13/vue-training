@@ -1,15 +1,8 @@
 <template>
-
     <form id="form" @submit.prevent="onSubmit" class="todoFrame">
         <div class="todoBox">
-            <input 
-                class="form-control todoInput" 
-                v-model="text" 
-                :placeholder="placeholderText" 
-                :class="{ 'placeholder-red': showError }" 
-                @input="onInput" 
-                type="text"
-            >
+            <input class="form-control todoInput" v-model="text" :placeholder="placeholderText"
+                :class="{ 'input-error': showError }" @input="onInput" type="text">
         </div>
 
         <div>
@@ -17,7 +10,6 @@
         </div>
     </form>
 </template>
-
 
 <script setup>
 import { ref, defineEmits } from "vue";
@@ -30,7 +22,7 @@ const emit = defineEmits(["addTodo"]);
 
 const onSubmit = () => {
     if (text.value.trim() === "") {
-        placeholderText.value = "請輸入文字";
+        placeholderText.value = "Need write something...";
         showError.value = true;
         return;
     }
@@ -51,9 +43,7 @@ const onInput = () => {
         showError.value = false;
     }
 };
+
 </script>
 
-<style lang="scss">
-
-
-</style>
+<style scoped lang="scss"></style>
