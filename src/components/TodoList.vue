@@ -4,7 +4,7 @@
             <button class="btn btn-delete" @click="deleteTodo(todo.id)">
                 <span class="material-symbols-outlined">close</span>
             </button>
-            <button class="btn btn-complete" @click="completeTodo(todo.id)">
+            <button class="btn btn-complete" @click="completeTodo(todo)">
                 <span class="material-symbols-outlined">check</span>
             </button>
             <button class="btn btn-edit" @click="showEditModal(todo)">
@@ -37,8 +37,9 @@ const deleteTodo = (todoId) => {
     emit('deleteTodo', todoId);
 };
 
-const completeTodo = (todoId) => {
-    emit('completeTodo', todoId);
+const completeTodo = (todo) => {
+    todo.complete = !todo.complete;
+    emit('completeTodo', todo);
 };
 
 const showEditModal = (todo) => {
